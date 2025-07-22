@@ -1,0 +1,12 @@
+# Add your dependencies here, one per line
+fastapi
+streamlit
+requests
+beautifulsoup4
+pandas
+sentence-transformers
+chromadb
+python-dotenv
+uvicorn
+tqdm
+llama-cpp-python
