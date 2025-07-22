@@ -1,28 +1,26 @@
-⚽ PitchPal: Your Football Knowledge Assistant 🤖
-PitchPal is a Retrieval-Augmented Generation (RAG) chatbot and API built for football fans! It scrapes the latest football news, embeds the content using powerful language models, and allows you to ask questions to get instant, source-grounded answers — all locally and for free.
+## ⚽ PitchPal: Your Football Knowledge Assistant 🤖
 
-🚀 Features
-🔍 Scrapes live football news headlines
+**PitchPal** is a **Retrieval-Augmented Generation (RAG)** chatbot and API built for football fans! It scrapes the latest football news, embeds the content using powerful language models, and allows you to ask questions to get **instant, source-grounded answers** — all locally and for free.
 
-🧠 Embeds text using Sentence Transformers
 
-🗂️ Stores and indexes data with ChromaDB (vector database)
+### 🚀 Features
 
-⚙️ Provides scraping and retrieval APIs via FastAPI
+* 🔍 Scrapes live football news headlines
+* 🧠 Embeds text using **Sentence Transformers**
+* 🗂️ Stores and indexes data with **ChromaDB** (vector database)
+* 🤖 Uses a local LLM powered by llama-cpp-python for answering queries
+* ⚙️ Provides scraping and retrieval APIs via **FastAPI**
+* 💬 Comes with a **Streamlit** chatbot frontend
+* 💻 Fully **local**, **open-source**, and **free to run**
 
-💬 Comes with a Streamlit chatbot frontend
+---
 
-💻 100% local, open-source, and free to run
+### 🧰 Tech Stack
 
-🧰 Tech Stack
-Python
-
-FastAPI
-
-Streamlit
-
-BeautifulSoup
-
-Sentence Transformers
-
-ChromaDB
+* **Python**
+* **FastAPI**
+* **Streamlit**
+* **BeautifulSoup**
+* **Sentence Transformers**
+* **ChromaDB**
+* **llama-cpp-python**
