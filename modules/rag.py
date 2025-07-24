@@ -1,13 +1,19 @@
 from sentence_transformers import SentenceTransformer
 import chromadb
-from chromadb.config import Settings
+import os
 
 def embed_and_store_headlines(headlines, collection_name="football_headlines"):
     # Load a pre-trained sentence transformer model
     model = SentenceTransformer("all-MiniLM-L6-v2")
 
-    # Create or load a ChromaDB collection
-    client = chromadb.Client(Settings())
+# Define the full path to the ChromaDB storage directory
+    persist_path = os.path.abspath(os.path.join("chroma_db"))
+    # Create the directory if it doesn't exist
+    os.makedirs(persist_path, exist_ok=True)
+    print(f"ChromaDB storage path: {persist_path}")
+
+# Use PersistentClient with the correct path
+    client = chromadb.PersistentClient(path=persist_path)
     collection = client.get_or_create_collection(collection_name)
 
     # Embed headlines and add to the collection
