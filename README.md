@@ -1,6 +1,6 @@
 ## ⚽ PitchPal: Your Football Knowledge Assistant 🤖
 
-**PitchPal** is a **Retrieval-Augmented Generation (RAG)** chatbot and API built for football fans! It scrapes the latest football news, embeds the content using powerful language models, and allows you to ask questions to get **instant, source-grounded answers** — all locally and for free.
+**PitchPal** is a **Retrieval-Augmented Generation (RAG)** chatbot and API built for football fans! It scrapes the latest football news, embeds the content using powerful language models, and allows you to ask questions to get **instant, source-grounded answers** .
 
 
 ### 🚀 Features
