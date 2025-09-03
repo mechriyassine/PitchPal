@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
 
 def fetch_football365_headlines():
     url = "https://www.football365.com/news"
@@ -12,16 +13,18 @@ def fetch_football365_headlines():
     h3_tags = soup.find_all("h3")
     print(f"Found {len(h3_tags)} <h3> tags")
 
+    now = datetime.utcnow().isoformat()
     for h3 in h3_tags:
         text = h3.get_text(strip=True)
-        if text and text not in headlines:
-            headlines.append(text)
+        if text and not any(text == h['headline'] for h in headlines):
+            # Save headline with current UTC datetime
+            headlines.append({"headline": text, "date": now})
     return headlines
 
 def save_headlines_to_file(headlines, filename="headlines.txt"):
     with open(filename, "w", encoding="utf-8") as f:
-        for idx, headline in enumerate(headlines, 1):
-            f.write(f"{idx}. {headline}\n")
+        for item in headlines:
+            f.write(f"{item['date']}|{item['headline']}\n")
     print(f"Saved {len(headlines)} headlines to {filename}")
 
 if __name__ == "__main__":
