@@ -9,7 +9,7 @@
 * 🧠 Embeds text using **Sentence Transformers**
 * 🗂️ Stores and indexes data with **ChromaDB** (vector database)
 * 🤖 Uses a local LLM powered by llama-cpp-python for answering queries
-* ⚙️ Provides scraping and retrieval APIs via **FastAPI**
+* ⚙️ **FastAPI** endpoint to scrape football headlines and save them to a file.
 * 💬 Comes with a **Streamlit** chatbot frontend
 * 💻 Fully **local**, **open-source**, and **free to run**
 
